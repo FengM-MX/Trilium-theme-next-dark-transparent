@@ -28,7 +28,8 @@
 
 /* 减少p标签底部的内边距 */
 .ck-content p {
-    margin-bottom: 0.3em !important;    /* 更小 */
+    margin-bottom: 0.3em !important;
+    /* 更小 */
 }
 
 /* 标题样式 - 蓝色加粗 */
@@ -38,57 +39,68 @@
 .ck-content h4,
 .ck-content h5,
 .ck-content h6 {
-    color: #2563eb !important;      /* 蓝色 */
-    font-weight: bold !important;   /* 加粗 */
+    color: #2563eb !important;
+    /* 蓝色 */
+    font-weight: bold !important;
+    /* 加粗 */
 }
+
 /* 所有的粗体，显示指定颜色，并加宽 */
 .ck-content strong {
     font-weight: 800;
     color: #cfdfff;
 }
 
-/* 所有类型实现背景透明*/
-.note-split{
-    background: rgba(35, 26, 26, 0.6) !important;
+:root {
+    --glass-bg: rgba(35, 26, 26, 0.6);
+    --glass-filter: blur(14px) saturate(180%);
 }
+
+/* 所有类型实现背景透明*/
+/* 在 .note-split 上创建一个绝对定位的伪元素层 */
+.note-split {
+    background: var(--glass-bg) !important;
+}
+
 
 /* 在笔记内容区域应用毛玻璃，而不是容器 */
 .note-split .note-detail,
 .note-split .note-detail-readonly-text,
-.note-split .scrolling-container,
-.note-split .ck-editor__editable {
-    background: rgba(35, 26, 26, 0.6) !important;
-    backdrop-filter: blur(14px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+.note-split .ck-editor__editable{
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-filter) !important;
+    -webkit-backdrop-filter: var(--glass-filter) !important;
 }
 
 /* 对标题单独进行染色，并增加渐变和圆角 */
-.inline-title{
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 0px solid #ffffff;
-  border-radius: 14px 14px 0px 0px;
-  box-shadow: 0 5px 32px rgba(0,0,0,0.05);
-  /* 渐变背景 */
-  background-image: radial-gradient(circle, 
-    #4337374D, 
-    #7a37374D
-  );
+.inline-title {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 0px solid #ffffff;
+    border-radius: 14px 14px 0px 0px;
+    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.05);
+    background-image: radial-gradient(circle,
+            #4337374D,
+            #7a37374D);
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
-.title-actions{
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 0px solid #ffffff;
-  border-radius: 0px 0px 14px 14px;
-  box-shadow: 0 5px 32px rgba(0,0,0,0.05);
-  background-image: radial-gradient(circle, 
-    #4337374D, 
-    #7a37374D
-  );
+.title-actions {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: blur(12px);
+    border: 0px solid #ffffff;
+    border-radius: 0px 0px 14px 14px;
+    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.05);
+    background-image: radial-gradient(circle,
+            #4337374D,
+            #7a37374D);
+    width: 100% !important;
+    max-width: 100% !important;
 }
+
 
 /* 增加标题和正文的间距 */
 .note-split .title-actions {
@@ -100,4 +112,36 @@
 .map-container,
 .cm-editor {
     background-color: transparent !important;
+}
+
+/* 在浏览器中，可能无法达到对应的结果，则单独设置 */
+/* 左侧的工具栏设置模糊，并通过z-index将其显示在最上层 */
+#launcher-pane {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-filter) !important;
+    -webkit-backdrop-filter: var(--glass-filter) !important;
+    z-index: 9999 !important;
+}
+
+/* 左侧的文件树设置模糊，并通过 z-index 将其显示在最下层*/
+#left-pane {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-filter) !important;
+    -webkit-backdrop-filter: var(--glass-filter) !important;
+    z-index: 1 !important;
+}
+
+
+/* 设置上方的tab页 */
+.tab-row-container {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-filter) !important;
+    -webkit-backdrop-filter: var(--glass-filter) !important;
+}
+
+/* 设置右侧的面板 */
+#right-pane {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-filter) !important;
+    -webkit-backdrop-filter: var(--glass-filter) !important;
 }
