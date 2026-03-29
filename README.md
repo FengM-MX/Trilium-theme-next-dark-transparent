@@ -1,9 +1,9 @@
 # Trilium-theme-next-dark-transparent
 trilium黑色毛玻璃主题
 - 代码编辑
-<img width="2560" height="1357" alt="image" src="https://github.com/user-attachments/assets/49755e42-be56-4221-a52a-8391883206a6" />‘
+  <img width="2560" height="1357" alt="image" src="https://github.com/user-attachments/assets/49755e42-be56-4221-a52a-8391883206a6" />
 - 笔记编辑
-<img width="2560" height="1380" alt="image" src="https://github.com/user-attachments/assets/3f04ef97-2344-454a-b43f-db7ad23dd2a0" />
+  <img width="2560" height="1380" alt="image" src="https://github.com/user-attachments/assets/3f04ef97-2344-454a-b43f-db7ad23dd2a0" />
 # 主题Trilium-theme-next-dark-transparent使用
 - 新增笔记
 - 文件类型选择Css
