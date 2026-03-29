@@ -23,3 +23,13 @@ trilium黑色毛玻璃主题
   ```
 - 激活的样式，右上角可以看到样式开关
 
+# 快捷键控制
+- 增加快捷键
+  - ctrl+[：减少缩进
+  - ctrl+]：增加缩进
+  - alt+1,2,3,4,5,6,0：分别设置2,3,4,5,6级以及正文
+  - 增加点击文档，直接在新的tab页面打开，并切换至新的tab页面
+- 使用
+  - 新建代码文档，类型选择js frontend
+  - ctrl+r刷新，即可
+    <img width="2098" height="1354" alt="image" src="https://github.com/user-attachments/assets/9c23fa68-bae7-4761-bb8c-ed021d8d4afb" />
