@@ -1,4 +1,3 @@
-
 .note-list-widget {
     outline: 0 !important;
 }
@@ -48,33 +47,53 @@
     color: #cfdfff;
 }
 
-
-/* 所有类型实现背景磨玻璃效果*/
+/* 所有类型实现背景透明*/
 .note-split{
-    background: rgba(28, 28, 30, 0.6) !important;
+    background: rgba(35, 26, 26, 0.6) !important;
+}
+
+/* 在笔记内容区域应用毛玻璃，而不是容器 */
+.note-split .note-detail,
+.note-split .note-detail-readonly-text,
+.note-split .scrolling-container,
+.note-split .ck-editor__editable {
+    background: rgba(35, 26, 26, 0.6) !important;
     backdrop-filter: blur(14px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
 }
 
-/* 区分出标题和正文 */
-.inline-title,
+/* 对标题单独进行染色，并增加渐变和圆角 */
+.inline-title{
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 0px solid #ffffff;
+  border-radius: 14px 14px 0px 0px;
+  box-shadow: 0 5px 32px rgba(0,0,0,0.05);
+  /* 渐变背景 */
+  background-image: radial-gradient(circle, 
+    #4337374D, 
+    #7a37374D
+  );
+}
+
 .title-actions{
-    background: rgba(65, 65, 70, 0.3) !important; 
-    backdrop-filter: blur(20px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(10px) saturate(130%) !important;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 0px solid #ffffff;
+  border-radius: 0px 0px 14px 14px;
+  box-shadow: 0 5px 32px rgba(0,0,0,0.05);
+  background-image: radial-gradient(circle, 
+    #4337374D, 
+    #7a37374D
+  );
 }
 
 /* 增加标题和正文的间距 */
 .note-split .title-actions {
     margin-bottom: 15px !important;
     padding-bottom: 10px !important;
-}
-
-/* 通用内层元素的半透明背景 */
-.note-split .note-detail,
-.note-split .note-detail-readonly-text,
-.note-split .scrolling-container {
-    background: transparent !important;
 }
 
 /* 思维导图、代码编辑器背景设置为透明 */
