@@ -1,0 +1,165 @@
+:root {
+    --theme-style: dark;
+    
+    --main-font-family: 'Raleway';
+    --main-font-size: normal;
+    
+    --tree-font-family: 'Raleway';
+    --tree-font-size: normal;
+    
+    --detail-font-family: 'Raleway';
+    --detail-font-size: normal;
+    
+    --monospace-font-family: 'Monospace';
+    --monospace-font-size: normal;
+
+    --main-background-color: #404552;
+    --main-text-color: #AFB8C6;
+    --main-border-color: #AFB8C6;
+    
+    --accented-background-color: #383C4A;
+    --more-accented-background-color: #2F343F;
+    
+    --button-text-color: #AFB8C6;
+    --button-background-color: #2F343F;
+    --button-disabled-text-color: #86919F;
+    --button-disabled-background-color: #404552;
+    --button-border-color: #333;
+    --button-border-radius: 2px;
+    
+    --primary-button-background-color: #6c757d;
+    --primary-button-text-color: white;
+    --primary-button-border-color: #6c757d;
+    
+    --muted-text-color: #86919F;
+    
+    --input-text-color: #AFB8C6;
+    --input-background-color: #404552;
+    
+    --hover-item-text-color: white;
+    --hover-item-background-color: #4877B1;
+        
+    --active-item-text-color: white;
+    --active-item-background-color: #4877B1;
+    
+    --menu-text-color: #AFB8C6;
+    --menu-background-color: #383C4A;
+    
+    --modal-background-color: #404552;
+    --modal-backdrop-color: black;
+    
+    --left-pane-background-color: #2F343F;
+    --left-pane-text-color: #AFB8C6;
+
+    --launcher-pane-background-color: #2F343F;
+    --launcher-pane-text-color: #AFB8C6;
+
+    --active-tab-background-color: #2F343F;
+    --active-tab-text-color: #AFB8C6;
+
+    --inactive-tab-background-color: #404552;
+    --inactive-tab-text-color: #AFB8C6;
+    
+    --scrollbar-border-color: rgba(175, 184, 198, 0.5);
+    --tooltip-background-color: #383C4A;
+    --link-color: lightskyblue;
+    
+    --mermaid-theme: forest;
+}
+
+body .global-menu-button {
+    background-image: url("../../../assets/vX/images/icon-grey.png");
+}
+
+body .note-detail-editable-text, body .note-detail-readonly-text {
+    font-size: 100%; /* Garamond is subjectively smaller */
+}
+
+body .CodeMirror {
+    font-size: 100%;
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+.note-list-widget {
+    outline: 0 !important;
+}
+
+/* 编辑器内容区域 - 主要选择器 */
+.ck-content,
+.ck-editor__editable,
+.note-detail-editable-text {
+    line-height: 1.8 !important;
+}
+
+/* 段落和列表项 - 确保子元素也继承 非必须，上面的已保证生效*/
+/* .ck-content p,
+.ck-content li,
+.ck-content div {
+    line-height: 1.8 !important;
+} */
+
+/* 标题也可以设置不同的行高（可选） */
+.ck-content h1,
+.ck-content h2,
+.ck-content h3,
+.ck-content h4,
+.ck-content h5,
+.ck-content h6 {
+    line-height: 1.4em !important;
+}
+
+/* 减少p标签底部的内边距 */
+.ck-content p {
+    margin-bottom: 0.3em !important;    /* 更小 */
+}
+
+/* 标题样式 - 蓝色加粗 */
+.ck-content h1,
+.ck-content h2,
+.ck-content h3,
+.ck-content h4,
+.ck-content h5,
+.ck-content h6 {
+    color: #2563eb !important;      /* 蓝色 */
+    font-weight: bold !important;   /* 加粗 */
+}
+/* 所有的粗体，显示指定颜色，并加宽 */
+.ck-content strong {
+    font-weight: 800;
+    color: #cfdfff;
+}
+
+
+/* 所有类型实现背景磨玻璃效果*/
+.note-split{
+    background: rgba(28, 28, 30, 0.6) !important;
+    backdrop-filter: blur(14px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+}
+
+/* 区分出标题和正文 */
+.inline-title,
+.title-actions{
+    background: rgba(65, 65, 70, 0.3) !important; 
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(10px) saturate(130%) !important;
+}
+
+/* 增加标题和正文的间距 */
+.note-split .title-actions {
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+}
+
+/* 通用内层元素的半透明背景 */
+.note-split .note-detail,
+.note-split .note-detail-readonly-text,
+.note-split .scrolling-container {
+    background: transparent !important;
+}
+
+/* 思维导图、代码编辑器背景设置为透明 */
+.map-container,
+.cm-editor {
+    background-color: transparent !important;
+}
