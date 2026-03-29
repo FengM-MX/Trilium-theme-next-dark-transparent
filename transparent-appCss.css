@@ -1,0 +1,84 @@
+
+.note-list-widget {
+    outline: 0 !important;
+}
+
+/* 编辑器内容区域 - 主要选择器 */
+.ck-content,
+.ck-editor__editable,
+.note-detail-editable-text {
+    line-height: 1.8 !important;
+}
+
+/* 段落和列表项 - 确保子元素也继承 非必须，上面的已保证生效*/
+/* .ck-content p,
+.ck-content li,
+.ck-content div {
+    line-height: 1.8 !important;
+} */
+
+/* 标题也可以设置不同的行高（可选） */
+.ck-content h1,
+.ck-content h2,
+.ck-content h3,
+.ck-content h4,
+.ck-content h5,
+.ck-content h6 {
+    line-height: 1.4em !important;
+}
+
+/* 减少p标签底部的内边距 */
+.ck-content p {
+    margin-bottom: 0.3em !important;    /* 更小 */
+}
+
+/* 标题样式 - 蓝色加粗 */
+.ck-content h1,
+.ck-content h2,
+.ck-content h3,
+.ck-content h4,
+.ck-content h5,
+.ck-content h6 {
+    color: #2563eb !important;      /* 蓝色 */
+    font-weight: bold !important;   /* 加粗 */
+}
+/* 所有的粗体，显示指定颜色，并加宽 */
+.ck-content strong {
+    font-weight: 800;
+    color: #cfdfff;
+}
+
+
+/* 所有类型实现背景磨玻璃效果*/
+.note-split{
+    background: rgba(28, 28, 30, 0.6) !important;
+    backdrop-filter: blur(14px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+}
+
+/* 区分出标题和正文 */
+.inline-title,
+.title-actions{
+    background: rgba(65, 65, 70, 0.3) !important; 
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(10px) saturate(130%) !important;
+}
+
+/* 增加标题和正文的间距 */
+.note-split .title-actions {
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+}
+
+/* 通用内层元素的半透明背景 */
+.note-split .note-detail,
+.note-split .note-detail-readonly-text,
+.note-split .scrolling-container {
+    background: transparent !important;
+}
+
+/* 思维导图、代码编辑器背景设置为透明 */
+.map-container,
+.cm-editor {
+    background-color: transparent !important;
+}
